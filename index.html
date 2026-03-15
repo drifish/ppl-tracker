@@ -565,17 +565,14 @@ return `<h2 style="margin:0 0 4px;font-size:18px;font-weight:800;">Compléments 
 }
 
 // ── INIT ──────────────────────────────────────────────────
-document.addEventListener(“DOMContentLoaded”, function() {
+window.onload = function() {
 loadAll();
 state.view = “main”;
 state.activeTab = “home”;
 setTimeout(function() {
-const pg = document.getElementById(“page”);
-if (pg) {
-pg.innerHTML = renderHome();
-}
-}, 100);
-});
+showTab(“home”);
+}, 50);
+};
 </script>
 
 </body>

@@ -569,10 +569,12 @@ document.addEventListener(“DOMContentLoaded”, function() {
 loadAll();
 state.view = “main”;
 state.activeTab = “home”;
+setTimeout(function() {
 const pg = document.getElementById(“page”);
 if (pg) {
 pg.innerHTML = renderHome();
 }
+}, 100);
 });
 </script>
 

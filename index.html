@@ -566,12 +566,12 @@ return `<h2 style="margin:0 0 4px;font-size:18px;font-weight:800;">Compléments 
 
 // ── INIT ──────────────────────────────────────────────────
 window.onload = function() {
+try {
 loadAll();
-state.view = “main”;
-state.activeTab = “home”;
-setTimeout(function() {
 showTab(“home”);
-}, 50);
+} catch(e) {
+document.getElementById(“page”).innerHTML = “<div style='color:red;padding:20px;'>ERREUR: “ + e.message + “</div>”;
+}
 };
 </script>
 
